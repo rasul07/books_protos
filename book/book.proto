@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+package genproto;
+option go_package="genproto/book";
+
+message BookCreate {
+    string name = 1;       
+    string author = 2;      
+    string category = 3;
+    string description = 4; 
+    int32 pages = 5;
+    string year = 6;  
+}
+
+message Book {
+    string ID = 1;      
+    string name = 2;   
+    string author = 3;   
+    string category = 4; 
+    string description = 5;
+    int32  pages = 6;
+    string year = 7;
+    int32  count = 8;
+}
+
+message GetAllBooksRequest {
+    int32 limit = 1;
+    int32 page = 2;
+}
+
+message GetAllBooksResponse {
+    repeated Book bookList = 1;
+}
+
+message GetBookByIdRequest {
+    string bookId = 1;
+}
+
+message GetBookByIdResponse {
+    Book book = 1;
+}

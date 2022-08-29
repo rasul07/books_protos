@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package genproto;
+option go_package="genproto/book";
+
+message CategoryCreate {
+    string name = 1;
+}
+
+message Category {
+    string ID = 1;      
+    string name = 2;
+}
+
+message GetAllCategoriesRequest {
+    int32 limit = 1;
+    int32 page = 2;
+}
+
+message GetAllCategoriesResponse {
+    repeated Category categoryList = 1;
+}
+
+message GetCategoryByIdRequest {
+    string bookId = 1;
+}
+
+message GetCategoryByIdResponse {
+    Category category = 1;
+}
