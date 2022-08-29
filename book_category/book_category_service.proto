@@ -1,7 +1,7 @@
 syntax = "proto3";
 
 package genproto;
-option go_package="genproto/book";
+option go_package="genproto/book_category";
 
 import "book_category/book_category.proto";
 import "google/protobuf/empty.proto";
