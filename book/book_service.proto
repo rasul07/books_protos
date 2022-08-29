@@ -9,6 +9,6 @@ import "google/protobuf/empty.proto";
 service BookService {
     rpc Create(BookCreate) returns(google.protobuf.Empty) {}
     rpc Update(BookCreate) returns(google.protobuf.Empty) {}
-    rpc GetCategories(GetAllBooksRequest) returns(GetAllBooksResponse) {}
-	rpc GetCategoryById(GetBookByIdRequest) returns(GetBookByIdResponse) {}
+    rpc GetBookss(GetAllBooksRequest) returns(GetAllBooksResponse) {}
+	rpc GetBookById(GetBookByIdRequest) returns(GetBookByIdResponse) {}
 }
