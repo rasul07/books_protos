@@ -11,4 +11,5 @@ service BookService {
     rpc Update(BookCreate) returns(google.protobuf.Empty) {}
     rpc GetBooks(GetAllBooksRequest) returns(GetAllBooksResponse) {}
 	rpc GetBookById(GetBookByIdRequest) returns(GetBookByIdResponse) {}
+    rpc Delete(Book) returns(google.protobuf.Empty) {}
 }
